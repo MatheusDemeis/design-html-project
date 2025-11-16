@@ -3,179 +3,104 @@
 <html class="dark" lang="en"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>SportConnect Feed</title>
+<title>FlowMotion - Login</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
-<script>
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    colors: {
-                        "primary": "#0da6f2",
-                        "background-light": "#f5f7f8",
-                        "background-dark": "#101c22",
-                    },
-                    fontFamily: {
-                        "display": ["Lexend", "sans-serif"]
-                    },
-                    borderRadius: {
-                        "DEFAULT": "1rem",
-                        "lg": "2rem",
-                        "xl": "3rem",
-                        "full": "9999px"
-                    },
-                },
-            },
-        }
-    </script>
 <style>
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-            font-size: 24px;
-        }
-        .material-symbols-outlined.fill {
-            font-variation-settings: 'FILL' 1;
+        body {
+            font-family: 'Lexend', sans-serif;
         }
     </style>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#0da6f2",
+              "background-light": "#f5f7f8",
+              "background-dark": "#101c22",
+            },
+            fontFamily: {
+              "display": ["Lexend"]
+            },
+            borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
 <style>
     body {
       min-height: max(884px, 100dvh);
     }
   </style>
   </head>
-<body class="bg-background-light dark:bg-background-dark font-display text-gray-800 dark:text-gray-200">
-<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden pb-24">
-<!-- Top App Bar -->
-<header class="sticky top-0 z-10 flex items-center justify-between bg-background-light/80 dark:bg-background-dark/80 p-4 backdrop-blur-sm">
-<h1 class="text-xl font-bold leading-tight tracking-[-0.015em] text-gray-900 dark:text-white">FlowMotion</h1>
-<div class="flex items-center gap-2">
-  <a href="notificationspage.html" aria-label="Notifications" class="flex h-10 w-10 items-center justify-center rounded-full bg-transparent text-gray-800 dark:text-white">
-    <span class="material-symbols-outlined">notifications</span>
-  </a>
-  <a href="messages.html" aria-label="Messages" class="flex h-10 w-10 items-center justify-center rounded-full bg-transparent text-gray-800 dark:text-white">
-    <span class="material-symbols-outlined">chat_bubble</span>
-  </a>
+<body class="bg-background-light dark:bg-background-dark">
+<div class="relative flex min-h-screen w-full flex-col bg-background-light dark:bg-background-dark group/design-root overflow-x-hidden font-display">
+<!-- Background Image -->
+<div class="absolute inset-0 z-0">
+<div class="w-full h-full bg-center bg-no-repeat bg-cover" data-alt="A snowboarder carving down a snowy mountain slope at sunset" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuADTXWKzDceOwABiaB6gV0e_94VKIqN8D-vLUJDe7yDSiTHJO_JERDsyIvbBjihtnI2uI3Ft5oZhpNzzkYRb8C4-l9Sz3iIUrhwNXDVu4kIy3y6oALd1qwI4QqHLsI2QqNkjlQA0ODH7JzI4YNzvUiIBR6TL4c1lj-ouemcU0um5fhSWmUYvdVtArO_TG2KuoJ10Fp7VizyoB5QvcbSC49ALyMD3Xpa_-vmCjoZqMwQSwb724QCNpzMIcv-9iXp4WOpW8VPd1CQCok");'></div>
+<div class="absolute inset-0 bg-background-dark/70 dark:bg-background-dark/80"></div>
 </div>
-</header>
-<!-- Story Carousel -->
-<div class="w-full flex-shrink-0 border-b border-gray-200/10 dark:border-gray-800/50">
-<div class="flex w-full overflow-x-auto px-4 py-3">
-<div class="flex min-h-min flex-row items-start justify-start gap-4">
-<div class="flex flex-col items-center justify-center gap-2 w-20 text-center">
-<div class="relative">
-<div class="w-16 h-16 bg-center bg-no-repeat aspect-square bg-cover rounded-full p-0.5 ring-2 ring-primary" data-alt="Your profile picture" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDbfCHQdiw06rNv8w6J08px14ij3RL7laikOVJ1z82dRmVl1Iju2vjNOPAPcVayFj81cV_4GZaBxfAeyKts-NSQhBmpvmxZzPkXCRcf5VgW040NIvOEe3ETH6HvO-RK5oBx1mgmovK0f_rw1YAx-hwEBwxMv_iqA9K8aCKlfFuaJeuOMXb4xuKLe72Y_iecycWfmUgQP22czi3_Ec1Eg3jqlucwGQ2LiVcL6Xpi5xqUJ98QoJzlFV5w4lRz06JgKUMa6r9iQrisH0I");'></div>
-<div class="absolute bottom-0 right-0 flex h-6 w-6 items-center justify-center rounded-full border-2 border-background-dark bg-primary">
-<span class="material-symbols-outlined text-white" style="font-size: 16px;">add</span>
+<!-- Login Form Container -->
+<main class="relative z-10 flex flex-col items-center justify-center grow px-4 py-12">
+<div class="w-full max-w-sm flex flex-col items-center">
+<!-- App Logo -->
+<div class="flex items-center gap-3 mb-2">
+<div class="w-12 h-12 flex items-center justify-center rounded-lg">
+<img src="logo.png" alt="FlowMotion Logo" class="w-100 h-100 items-center"/>
 </div>
 </div>
-<p class="text-gray-700 dark:text-gray-300 text-xs font-medium leading-normal">Your Story</p>
-</div>
-<div class="flex flex-col items-center justify-center gap-2 w-20 text-center">
-<div class="w-16 h-16 bg-center bg-no-repeat aspect-square bg-cover rounded-full p-0.5 ring-2 ring-gray-400 dark:ring-gray-600" data-alt="Profile picture of SurfLife" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB_1DZEAveT5TWVPnxwWWsBnhVJCOVqdqrdRFVEiVQqKR2zAM897v8gbyU3afN1_WKo5_7DQVLhBecuLqPgqPuAHVkwUMF3ANZnbAIMGvihTfaQDH4CIojZNJ1vlZTC_onwEPLN4Vcv7MqTaewRQXyKOidaCfNVgB50Mp-1iuVDyifv8PYWG_dn4Olrypf1F046ZDmhN-OgNc9_fRvnI68DDNqwo0CpSk4xk2GAyAdSnWm1VwuNZDrhKX6SwtExdmjxzCSroKi1MIA");'></div>
-<p class="text-gray-700 dark:text-gray-300 text-xs font-medium leading-normal">SurfLife</p>
-</div>
-<div class="flex flex-col items-center justify-center gap-2 w-20 text-center">
-<div class="w-16 h-16 bg-center bg-no-repeat aspect-square bg-cover rounded-full p-0.5 ring-2 ring-gray-400 dark:ring-gray-600" data-alt="Profile picture of MTB_Zone" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCyCRtxW-ZsCVdvAnUpmZU6_H0uRH-Iy0dIU_mS_QCuPvC-pOYVdrZaBWppsXtgMMAf4v1ENwQtA0A-MCBsJWGWZVIYdsKZUlIBJc_8xN-Ue__fuM0LuRyZsg-nylRnfAf1t6chqGNmIyWPzeH6Y2g1HthaSZwB3Ml9xTkFevCWw3qzhGIm02rkqLXLbA0Q_dFNT4gcmFMfADOGWKOeCLU9WbJgvFHTWMDcFYLIZaSfsmW91VV0Qh9bK_4m-7laAzT5wjH5mrZ3Ohs");'></div>
-<p class="text-gray-700 dark:text-gray-300 text-xs font-medium leading-normal">MTB_Zone</p>
-</div>
-<div class="flex flex-col items-center justify-center gap-2 w-20 text-center">
-<div class="w-16 h-16 bg-center bg-no-repeat aspect-square bg-cover rounded-full p-0.5 ring-2 ring-gray-400 dark:ring-gray-600" data-alt="Profile picture of LeoMessi" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA1Yozc-m2BIyIOMrbeMZwX7vrjd2GRQSWX2y8RhsUuCggY4GKDFFngeaiPO38b14FdrzjVtprkg8XoeV6nEL0i70EHMImCIC0412laOCPR3Q5SgWknuC3SsDT6SKOAdWMPdRiQgQ5np041Be48fbvFnZasdcBaYG_66dlGdfR8jRaz2X_tI4V76Ncsh6sHCd1xGZhwOHl_stmtb-WuXkZsqlqO4piSB4DXosmSkicRJ7oLEKMSEkLFgLkCDNPQXPO30a0nCseiTMU");'></div>
-<p class="text-gray-700 dark:text-gray-300 text-xs font-medium leading-normal">LeoMessi</p>
-</div>
-<div class="flex flex-col items-center justify-center gap-2 w-20 text-center">
-<div class="w-16 h-16 bg-center bg-no-repeat aspect-square bg-cover rounded-full p-0.5 ring-2 ring-gray-400 dark:ring-gray-600" data-alt="Profile picture of ShaunW" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBwdu5XLzT8Dg_KjMKVsN6uOy3TjW0BL6dT2JCh7E8RbXUlM0_9Nj6smDmI_tl9nYy5NYe8-oxwXQj1iD2cey1ycxQ2Gm_UQxiS7kfZz6JD13ZZVbFCNHBwFKWVMDhHEiEGXSmiQUtUmG4ZCgaKsJSjho758VlVlcZfegjngxpOzFUD39h91SCvzfeXytEsDshuB35CzOux5FZy5V2cGoJotYyxT4m-fO97M7DKyx0zCLy4vmBfLhmltLjwfGKVUDvdEj4GNeRY4h8");'></div>
-<p class="text-gray-700 dark:text-gray-300 text-xs font-medium leading-normal">ShaunW</p>
-</div>
-<div class="flex flex-col items-center justify-center gap-2 w-20 text-center">
-<div class="w-16 h-16 bg-center bg-no-repeat aspect-square bg-cover rounded-full p-0.5 ring-2 ring-gray-400 dark:ring-gray-600" data-alt="Profile picture of AlexHonnold" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAaSztQJ9Zlg00kw7bgcsrGd5eBygXIHVjBqWxuxpKwHBN4kPlXl0nIxVKr912Lckqwg1gtkxuu7rLaVm9_29ak1a1l9MfeK10Ws_MRnw76_z7w6y4n_efKCxO8E88w8piHOR8bHxDTs1iSeI9cZzCq6MYnJPNnPAR9qd5LrQcI46qNLdjCacjQqEOJn20GRxU68IMKHRhE0AqJldK1fXNan_uOILHftzk40oeSFBJkv8Cd_M41VNArhOc41pxiAWlg2x4hs6ibunI");'></div>
-<p class="text-gray-700 dark:text-gray-300 text-xs font-medium leading-normal">AlexHonnold</p>
+<!-- Headline & Subtitle -->
+<h1 class="text-white tracking-light text-3xl font-bold leading-tight text-center">FlowMotion</h1>
+<p class="text-white/80 text-base font-normal leading-normal text-center mt-1 mb-8">Your Adventure Awaits</p>
+<!-- Input Fields -->
+<div class="w-full flex flex-col gap-4">
+<label class="flex flex-col w-full">
+<p class="text-white/90 text-sm font-medium leading-normal pb-2">Email or Username</p>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-white/90 focus:outline-0 focus:ring-2 focus:ring-primary/50 border border-white/20 bg-white/10 h-12 placeholder:text-white/50 px-4 text-base font-normal leading-normal" placeholder="Enter your email or username" type="text" value=""/>
+</label>
+<div class="flex flex-col w-full">
+<label class="flex flex-col">
+<p class="text-white/90 text-sm font-medium leading-normal pb-2">Password</p>
+<div class="relative flex w-full flex-1 items-stretch">
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-white/90 focus:outline-0 focus:ring-2 focus:ring-primary/50 border border-white/20 bg-white/10 h-12 placeholder:text-white/50 px-4 pr-12 text-base font-normal leading-normal" placeholder="Enter your password" type="password" value=""/>
+<div class="absolute right-0 top-0 h-full flex items-center pr-3 text-white/60">
+<span class="material-symbols-outlined text-2xl">visibility</span>
 </div>
 </div>
+</label>
+<a class="text-primary text-sm font-medium text-right mt-2 hover:underline" href="#">Forgot Password?</a>
 </div>
 </div>
-<!-- Feed Content -->
-<main class="flex flex-col gap-4 py-4">
-<!-- Post Card 1 -->
-<div class="flex flex-col">
-<div class="flex items-center gap-3 px-4 pb-3">
-<div class="w-10 h-10 bg-center bg-no-repeat aspect-square bg-cover rounded-full" data-alt="Profile picture of ShaunW" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAZFA0_kfQPTykPtHu22beCuV1L-88PQGlMmrJ_CzJJ_30qlg4uPR7Crx2iTPCBIqBTbT__bIj73Sp5XBnB9FotKk2tTz5CDS905R0rhQZciVB6rRGxE9HUMJTQE1unWonMrpU43GLgpfukJXTZlL5Zzy68HyEfQw_gmucKdPM2WB2_QB6bAuALq2KDzwjkJNcx7DAmSBZVVzZ6TyVSOsg6RxRzZNBzMNmputAxVXMHpe60CIRWnLNIjcBQjAPoQR4QyR9_F5t1h3A");'></div>
-<div>
-<p class="text-gray-900 dark:text-white text-sm font-bold leading-tight">ShaunW</p>
-<p class="text-gray-500 dark:text-gray-400 text-xs font-normal leading-normal">Snowboarding @ Aspen</p>
+<!-- CTA Button -->
+ <a href="homepage.html" class="w-full">
+    <button class="flex items-center justify-center w-full h-12 px-6 mt-6 bg-primary text-white rounded-lg text-base font-bold leading-normal transition-colors hover:bg-primary/90">
+                    Login
+                </button>
+ </a>
+
+<!-- Divider -->
+<div class="flex items-center w-full gap-4 my-6">
+<hr class="w-full border-t border-white/20"/>
+<p class="text-sm font-medium text-white/60">OR</p>
+<hr class="w-full border-t border-white/20"/>
 </div>
+<!-- Social Login Options -->
+<div class="w-full flex flex-col gap-4">
+<button class="flex items-center justify-center w-full h-12 px-6 bg-white/10 text-white rounded-lg text-base font-medium leading-normal border border-white/20 transition-colors hover:bg-white/20">
+<img alt="Google logo" class="w-6 h-6 mr-3" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC_M8oP-trau3n2lwa0yVmSVvdEiT0qLn5VLzXQtDVDPnoiUmSu2XoRPYmAHtz_f8ZUuSPuV1hJ0WHOkRufNwMkE0O8KaVkCR4aYligdhJlev0rA_7bvd78JH6kWvEOHMrU37uiu7w5ZGZlZMYLSV_IxkBiqmDCUgPqOeoJiPfn9cfBMK8HpW0pXH0N4MocMj-mpXZhzNKaK8JzGmpgnvl-RNoEXlzJRpGxb0axuOa3_RneLikVmePMmt-_2hzkZo00H-Y-RZncL_A"/>
+                        Continue with Google
+                    </button>
+<button class="flex items-center justify-center w-full h-12 px-6 bg-white/10 text-white rounded-lg text-base font-medium leading-normal border border-white/20 transition-colors hover:bg-white/20">
+<img alt="Apple logo" class="w-6 h-6 mr-3" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAFXBWtl8v5vmuxtugO36CYZEjGaTEtIbnt7WpXc_5Fjl46Icl3U8AhDpdHKJ_4cErYFZMgY12bbxLiE9cnS1Cdabqu0fxUMEckRW4GnMnpbVwnzsWjtJjM5_AUPHugAViw8ZQ0e8UzLTiaMNM8AjBIZPnbWuR288H9squppSWrt5fiFJSrov98YasXTv5M8WeGTb3KhR4Y2RntUnXElCtVKmea4MblDUOekdp09SMV2phUi9RD2hLj4myANmE1RvroGQx4QU9ugCo"/>
+                        Continue with Apple
+                    </button>
 </div>
-<div class="w-full bg-center bg-no-repeat aspect-square bg-cover" data-alt="A snowboarder captured mid-air against a snowy mountain backdrop." style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCTp0pR-LQw5BurxRCFfgBmg0yLudJNDpLDyexpTLh2UA_lzPmIcZ7zGUneGWgb880B5j6vGsDCmdLxLg8sOPSvxHzafKqt7nBVc9KkTZc5enCJMUPWrWMCC4hI8fO2kkCluvWMANaphf2upxMwCzZzDypUbOQ9YLjjUxflb4LygXl9Jsknwx_1m4QtAyOWi1y4fOYZFExBGBFkDhLWxlBMpJ6ptUoWlWIm5zwUBxK6GWun0tXFHZznGsgfJ6DFKBHYiBbZ3zUdp6M");'></div>
-<div class="flex items-center justify-start gap-2 px-2 py-2">
-<button class="flex h-10 w-10 items-center justify-center rounded-full hover:bg-primary/20 text-gray-500 dark:text-gray-400 hover:text-primary">
-<span class="material-symbols-outlined">favorite</span>
-</button>
-<button class="flex h-10 w-10 items-center justify-center rounded-full hover:bg-primary/20 text-gray-500 dark:text-gray-400 hover:text-primary">
-<span class="material-symbols-outlined">chat_bubble_outline</span>
-</button>
-<button class="flex h-10 w-10 items-center justify-center rounded-full hover:bg-primary/20 text-gray-500 dark:text-gray-400 hover:text-primary">
-<span class="material-symbols-outlined">send</span>
-</button>
-</div>
-<div class="flex flex-col gap-1 px-4 pb-4">
-<p class="text-gray-700 dark:text-gray-300 text-sm font-bold">128 likes</p>
-<p class="text-gray-800 dark:text-gray-200 text-sm"><span class="font-bold">ShaunW</span> What an epic powder day! The conditions were just perfect. <span class="text-primary">#snowboarding #bigair</span></p>
-<p class="text-gray-500 dark:text-gray-400 text-xs cursor-pointer hover:underline">View all 15 comments</p>
-<p class="text-gray-400 dark:text-gray-500 text-xs pt-1">2 hours ago</p>
-</div>
-</div>
-<!-- Post Card 2 -->
-<div class="flex flex-col">
-<div class="flex items-center gap-3 px-4 pb-3">
-<div class="w-10 h-10 bg-center bg-no-repeat aspect-square bg-cover rounded-full" data-alt="Profile picture of SurfLife" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAWT0tv63_NOUXvRt82_NUoKUmHJtYZflxzDnKMQxVohEIjStDhOtCjRpBOIA441ciuh_-pUaIuftl5j6JOk8hrFIXXCs5oEyJOEWEjupgU-k5KuIHlMEAnnTKqbAT4goh0sy4ATgAnPLRE3BZOYyhohujWrG8mzOmXDqbn3fPUYbfrf-_Q-DDI4Tj2QW2xI0cnVmZwkRY_erdiL94y_VCT-5-dq7MRNDi4fi-sVuE4CK6jQObTn-_iao4NYc0-0P_RjFsh3b0gh2o");'></div>
-<div>
-<p class="text-gray-900 dark:text-white text-sm font-bold leading-tight">SurfLife</p>
-<p class="text-gray-500 dark:text-gray-400 text-xs font-normal leading-normal">Surfing @ Mavericks</p>
-</div>
-</div>
-<div class="w-full bg-center bg-no-repeat aspect-square bg-cover" data-alt="A surfer riding a large, curling ocean wave." style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCRiWP72Zvgw0851MQfeNJ9RfI5aSgxNEsxYvkDO0EirsHakK3irUZFz_974Y8QDJRv3l5EdwHBj7wt7uU_756EL09qtbl9d--kYYkvgx94B5zNPvnosal1Uln2KOyI4tkJKZB5_VeH5szqWNh00TDPPEn_HAegXdlRhv13YxOrTXey4LLt1jfwpdifmJA2qI9NQ94drDi3ShS8xz--dBNiUMtFONIqACjdkX-N-0c1mFNBzS3kYPPRS5KXew8ZjL59Yu4uaafqkT0");'></div>
-<div class="flex items-center justify-start gap-2 px-2 py-2">
-<button class="flex h-10 w-10 items-center justify-center rounded-full hover:bg-primary/20 text-gray-500 dark:text-gray-400 hover:text-primary">
-<span class="material-symbols-outlined">favorite</span>
-</button>
-<button class="flex h-10 w-10 items-center justify-center rounded-full hover:bg-primary/20 text-gray-500 dark:text-gray-400 hover:text-primary">
-<span class="material-symbols-outlined">chat_bubble_outline</span>
-</button>
-<button class="flex h-10 w-10 items-center justify-center rounded-full hover:bg-primary/20 text-gray-500 dark:text-gray-400 hover:text-primary">
-<span class="material-symbols-outlined">send</span>
-</button>
-</div>
-<div class="flex flex-col gap-1 px-4 pb-4">
-<p class="text-gray-700 dark:text-gray-300 text-sm font-bold">456 likes</p>
-<p class="text-gray-800 dark:text-gray-200 text-sm"><span class="font-bold">SurfLife</span> Caught the wave of a lifetime today! Stoked. <span class="text-primary">#surfing #beachlife</span></p>
-<p class="text-gray-500 dark:text-gray-400 text-xs cursor-pointer hover:underline">View all 42 comments</p>
-<p class="text-gray-400 dark:text-gray-500 text-xs pt-1">5 hours ago</p>
-</div>
+<!-- Sign-up Link -->
+<p class="text-white/80 text-base font-normal leading-normal text-center mt-8">Don't have an account? <a class="font-bold text-primary hover:underline" href="signup.html">Sign Up</a></p>
 </div>
 </main>
-<!-- Floating Action Button -->
-<a href="createmeetup.html" role="button" aria-label="Create Meetup" class="fixed bottom-24 right-4 z-10 flex h-14 w-14 items-center justify-center overflow-hidden rounded-full bg-primary text-white shadow-lg transition-transform hover:scale-105 active:scale-95">
-  <span class="material-symbols-outlined" style="font-size: 32px;">add</span>
-</a>
-<!-- Bottom Navigation Bar -->
-<nav class="fixed bottom-0 left-0 right-0 z-10 flex h-20 items-center justify-around border-t border-gray-200/50 bg-background-light/80 dark:border-gray-800/50 dark:bg-background-dark/80 backdrop-blur-sm">
-<a class="flex flex-col items-center gap-1 text-primary" href="index.html">
-<span class="material-symbols-outlined fill">home</span>
-<span class="text-xs font-bold">Home</span>
-</a>
-<a class="flex flex-col items-center gap-1 text-gray-500 dark:text-gray-400" href="communities.html">
-<span class="material-symbols-outlined">search</span>
-<span class="text-xs font-medium">Clubs</span>
-</a>
-<a class="flex flex-col items-center gap-1 text-gray-500 dark:text-gray-400" href="weatherhub.html">
-<span class="material-symbols-outlined">cloud</span>
-<span class="text-xs font-medium">Weather</span>
-</a>
-<a class="flex flex-col items-center gap-1 text-gray-500 dark:text-gray-400" href="progresspage.html">
-<span class="material-symbols-outlined">person</span>
-<span class="text-xs font-medium">Progress</span>
-</a>
-</nav>
 </div>
 </body></html>
