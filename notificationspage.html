@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Notifications Screen</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#0da6f2",
+              "background-light": "#f5f7f8",
+              "background-dark": "#101c22",
+              "accent": "#ffc107",
+            },
+            fontFamily: {
+              "display": ["Lexend", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24
+      }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display">
+<div class="relative mx-auto flex h-auto min-h-screen w-full max-w-md flex-col overflow-x-hidden bg-background-light dark:bg-background-dark">
+<!-- Top App Bar -->
+<div class="sticky top-0 z-10 flex items-center justify-between bg-background-light/80 p-4 pb-3 backdrop-blur-sm dark:bg-background-dark/80">
+    <div class="text-slate-800 dark:text-white flex size-12 shrink-0 items-center justify-center">
+    <a href="homepage.html">
+        <span class="material-symbols-outlined text-2xl">arrow_back</span>
+    </a>
+</div>
+<h1 class="text-xl font-bold text-slate-900 dark:text-white">Notifications</h1>
+<button class="shrink-0 text-sm font-medium text-primary hover:text-primary/80">Mark all as read</button>
+</div>
+<!-- Notification List -->
+<div class="flex flex-col gap-1 p-2">
+<!-- Unread Notification: Comment -->
+<div class="flex items-start gap-4 rounded-lg bg-white p-3 shadow-sm dark:bg-slate-800/50">
+<div class="relative mt-1 shrink-0">
+<div class="h-12 w-12 rounded-full bg-cover bg-center" data-alt="Avatar of Maya Garcia" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAND2jxW-R-ggoJUk5uipL_3MBlS2LDbJErUREq5_lhu2o0q1ORcC74Mw0f244SI1gOBOnTojrGoyyMTf2_Q3XmBoBgstk-px7Mpt58C9c_bNwWBRyE9F7FEGqc8INr-U2sLTZ3E6VRMfMfEhdkBu-IbPr_mXWunaIdhb1LLgV6Quufd1_AkK9ApCXRzYqw6LfogtzbSTFEEG5D-hR4FSNNRnr-a0Y_FP3Kg4wlqvqkpGPNTO1Uxqi8mxmvaHEGuIBXJi_PHk6qpRw')"></div>
+<div class="absolute -bottom-1 -right-1 flex h-6 w-6 items-center justify-center rounded-full border-2 border-white bg-pink-500 text-white dark:border-slate-800/50">
+<span class="material-symbols-outlined !text-base">chat_bubble</span>
+</div>
+</div>
+<div class="flex-1">
+<p class="text-slate-800 dark:text-slate-100">
+<span class="font-semibold">Maya Garcia</span> commented on your photo.
+                    </p>
+<p class="mt-1 rounded-md bg-slate-100 p-2 text-sm text-slate-600 dark:bg-slate-700 dark:text-slate-300">“Love this shot! The waves look perfect.”</p>
+<p class="mt-1 text-xs text-slate-500 dark:text-slate-400">2h ago</p>
+</div>
+<div class="mt-1.5 h-2.5 w-2.5 shrink-0 rounded-full bg-accent"></div>
+</div>
+<!-- Unread Notification: Weather Alert -->
+<div class="flex items-start gap-4 rounded-lg bg-white p-3 shadow-sm dark:bg-slate-800/50">
+<div class="relative mt-1 shrink-0">
+<div class="flex h-12 w-12 items-center justify-center rounded-full bg-primary/20 text-primary">
+<span class="material-symbols-outlined">airwave</span>
+</div>
+</div>
+<div class="flex-1">
+<p class="text-slate-800 dark:text-slate-100">
+<span class="font-semibold">Surf's up!</span> Ideal wave conditions at Sunset Cliffs today.
+                    </p>
+<p class="mt-1 text-xs text-slate-500 dark:text-slate-400">3h ago</p>
+</div>
+<div class="mt-1.5 h-2.5 w-2.5 shrink-0 rounded-full bg-accent"></div>
+</div>
+<!-- Read Notification: New Follower -->
+<div class="flex items-start gap-4 rounded-lg bg-white p-3 shadow-sm dark:bg-slate-800/50">
+<div class="relative mt-1 shrink-0">
+<div class="h-12 w-12 rounded-full bg-cover bg-center" data-alt="Avatar of Liam Chen" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC9NEBo-Tluf2iUbO3zGIZabVNPgTuC0C5jxYSzZrj6BhwNjJa4VIzehjCg0DeJqqWkE3d7i4vhViGw0lfRSEWKfFp1ns-CyLS-9Yjkjzgl_tTk7c-orD1O2T1Hbwl2ymiOKOTgCvYCYa-xqv8vCjX9xBRLtwru7AgqWOy86UmWdwduZVO30TOyr9MM4k6N79vqzr06v9HitcS24x57WyW1lf1cImdR0vaq0WKZ60ri_-NfZcMD_eHPLpfBWkCYyPD8xgGs13SU-jY')"></div>
+<div class="absolute -bottom-1 -right-1 flex h-6 w-6 items-center justify-center rounded-full border-2 border-white bg-primary text-white dark:border-slate-800/50">
+<span class="material-symbols-outlined !text-base">person_add</span>
+</div>
+</div>
+<div class="flex-1">
+<p class="text-slate-800 dark:text-slate-100">
+<span class="font-semibold">Liam Chen</span> started following you.
+                    </p>
+<p class="mt-1 text-xs text-slate-500 dark:text-slate-400">Yesterday</p>
+</div>
+<!-- No unread indicator -->
+</div>
+<!-- Read Notification: Like with Thumbnail -->
+<div class="flex items-start gap-4 rounded-lg bg-white p-3 shadow-sm dark:bg-slate-800/50">
+<div class="relative mt-1 shrink-0">
+<div class="h-12 w-12 rounded-full bg-cover bg-center" data-alt="Avatar of Alex Johnson" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA7eAaZqL7-mO-IGZNHeiSI8qNFQv6d7pPm5De3BkE3CAvkciw1-JYTQFXJrPTOVrzwC3jkmmNN9yLfzxbu9257S68R9j5xtB8fH0D-NL3pyDg6vY_-2nDlfX1aqa3N1x879wgRhlNzSASZhxX3Qc4ymzTJ2ZRx7zIUBGhhPlkUzoq8kXE0hBvYXAf3kWh16TNNmcUYZ-Q49pix8rZvL5qfh_Mz5vDMPBmFjIQSkOA4gEBRk4ktp-8_yxJ7Dc1AayQTsU3cvYzqHsg')"></div>
+<div class="absolute -bottom-1 -right-1 flex h-6 w-6 items-center justify-center rounded-full border-2 border-white bg-red-500 text-white dark:border-slate-800/50">
+<span class="material-symbols-outlined !text-base">favorite</span>
+</div>
+</div>
+<div class="flex-1">
+<p class="text-slate-800 dark:text-slate-100">
+<span class="font-semibold">Alex Johnson</span> liked your photo.
+                    </p>
+<p class="mt-1 text-xs text-slate-500 dark:text-slate-400">Yesterday</p>
+</div>
+<div class="h-16 w-16 shrink-0 rounded-lg bg-cover bg-center" data-alt="User's snowboarding photo that was liked" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA-tcStdYbl9i6kVxpLG_taCM4mKz0efzw7Xv4akvltCaY-uOurgKI6OeTr9lT3dz4hXbbMftEx8zwzC1gw6iyNyLOzRQ6LVIl-35rznuRliUo-zxAvSaHbAgHEmDopanKVWq27Um9x187rRv1o9unhR1Uf3eN9qaF4hLFrH_yFrZeQvRSWBz3_vm0WAfsYI-xkQEf4NTsEIok7zKW97pxfXMSFLnCbM_4Hu9pd9qrLdivguKycPasINcnmdIVmGOxjH17RHdeNmsQ')"></div>
+</div>
+<!-- Read Notification: Event Invite -->
+<div class="flex items-start gap-4 rounded-lg bg-white p-3 shadow-sm dark:bg-slate-800/50">
+<div class="relative mt-1 shrink-0">
+<div class="flex h-12 w-12 items-center justify-center rounded-full bg-green-500/20 text-green-500">
+<span class="material-symbols-outlined">event</span>
+</div>
+</div>
+<div class="flex-1">
+<p class="text-slate-800 dark:text-slate-100">
+                         You're invited to <span class="font-semibold">Dawn Patrol Surf Meet</span>
+</p>
+<p class="mt-1 text-xs text-slate-500 dark:text-slate-400">2 days ago</p>
+</div>
+<!-- No unread indicator -->
+</div>
+<!-- Read Notification: Group Update -->
+<div class="flex items-start gap-4 rounded-lg bg-white p-3 shadow-sm dark:bg-slate-800/50">
+<div class="relative mt-1 shrink-0">
+<div class="flex h-12 w-12 items-center justify-center rounded-full bg-indigo-500/20 text-indigo-500">
+<span class="material-symbols-outlined">groups</span>
+</div>
+</div>
+<div class="flex-1">
+<p class="text-slate-800 dark:text-slate-100">
+                         New post in the <span class="font-semibold">Snowboarding Community</span> group.
+                    </p>
+<p class="mt-1 text-xs text-slate-500 dark:text-slate-400">3 days ago</p>
+</div>
+<!-- No unread indicator -->
+</div>
+<!-- Empty State (Example - uncomment to view) -->
+<!--
+            <div class="flex flex-col items-center justify-center py-20 text-center">
+                <div class="flex h-20 w-20 items-center justify-center rounded-full bg-slate-200 text-slate-500 dark:bg-slate-700 dark:text-slate-400">
+                    <span class="material-symbols-outlined !text-4xl">notifications</span>
+                </div>
+                <h3 class="mt-6 text-lg font-semibold text-slate-900 dark:text-white">All caught up!</h3>
+                <p class="mt-1 text-slate-500 dark:text-slate-400">Your new notifications will appear here.</p>
+            </div>
+            -->
+</div>
+</div>
+</body></html>

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Communities</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#007AFF",
+                        "secondary": "#FF9500",
+                        "accent": "#34C759",
+                        "text-primary": "#1C1C1E",
+                        "text-secondary": "#8E8E93",
+                        "background": "#F2F2F7",
+                        "dark-text-primary": "#F2F2F7",
+                        "dark-text-secondary": "#8E8E93",
+                        "dark-background": "#1C1C1E",
+                        "dark-surface": "#2C2C2E",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "1rem",
+                        "lg": "1.25rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings:
+            'FILL' 0,
+            'wght' 400,
+            'GRAD' 0,
+            'opsz' 24
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background dark:bg-dark-background font-display">
+<div class="relative flex min-h-screen w-full flex-col">
+<!-- Top App Bar -->
+<header class="flex items-center px-4 pt-4 pb-2">
+<h1 class="text-text-primary dark:text-dark-text-primary text-3xl font-bold tracking-tight flex-1">Communities</h1>
+<a class="flex items-center justify-center rounded-full h-12 w-12 text-primary" href="createmeetup.html" role="button" aria-label="Create meetup">
+  <span class="material-symbols-outlined text-3xl">add_circle</span>
+</a>
+</header>
+<!-- Search Bar -->
+<div class="px-4 py-3">
+<label class="flex flex-col min-w-40 h-14 w-full">
+<div class="flex w-full flex-1 items-stretch rounded-lg h-full">
+<div class="text-text-secondary flex items-center justify-center pl-4 rounded-l-lg bg-gray-200 dark:bg-dark-surface">
+<span class="material-symbols-outlined">search</span>
+</div>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-r-lg text-text-primary dark:text-dark-text-primary focus:outline-0 focus:ring-0 border-none bg-gray-200 dark:bg-dark-surface h-full placeholder:text-text-secondary px-4 pl-2 text-base font-normal" placeholder="Search for sports, groups, or interests..." value=""/>
+</div>
+</label>
+</div>
+<!-- Section Header: Recommended For You -->
+<h2 class="text-text-primary dark:text-dark-text-primary text-xl font-bold tracking-tight px-4 pb-3 pt-4">Recommended For You</h2>
+<!-- Horizontal Carousel: Image Grid -->
+<div class="flex overflow-x-auto snap-x snap-mandatory scroll-smooth pb-4 [&amp;::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
+<div class="flex pl-4 space-x-3">
+<div class="flex-none w-40 snap-start">
+<div class="bg-cover bg-center flex flex-col justify-end p-3 rounded-lg aspect-[3/4]" data-alt="A person snowboarding down a snowy mountain" style='background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 60%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuCbY2TbfLIco9gm0UqtRGx6ane2foDrX1H4f-kcknBE9RnP1z1wbOZlh2mAR1np7PG21BExCLY1oITMQ3dmQYJJYVGBVILa7Arke6E4K_DaGnIiWTz1aHH0IPjrMzN0alCpSO0yIIsarL2LuwdXDcWjtxBP_GdDSoYbwj4oi7zDe1WpzR0Q9uRlinm2YRaOytJ5tDC7BLwiux59x7HmgsRjUQFMtldfBFpD5b9I2htetnZXS0zES0xA2B1Z-nLK5zcG-o12KpqBgWw");'>
+<p class="text-white text-base font-bold leading-tight">Colorado Snowboarders</p>
+<p class="text-gray-200 text-xs">2.4k members</p>
+</div>
+</div>
+<div class="flex-none w-40 snap-start">
+<div class="bg-cover bg-center flex flex-col justify-end p-3 rounded-lg aspect-[3/4]" data-alt="A surfer riding a large wave" style='background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 60%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuApN2mcov8_JJwnzROBYwyJoiiZvK9oIQjCQgLLndGLBXkbs1JCZenKqsicMI9LHBGpm2vQGXNuFbUBX7XE6B6RwRuLPv4vodr_2PXYTxHwjCR1Zq-SkqHwEBwB6nkPo69zo6hbZZ2d1Sp-bKt_GXvxiulsb-S5rKKQ3u_y2YTUMsIccezR-gRBB_KVhwBalBQagqS-8slYwyVY9IqNGBnb8wbvC8eKZ8duPYFgoy4xyyUAek9xGUZNfHGcWk1wHLRxZ6blFQ0qakc");'>
+<p class="text-white text-base font-bold leading-tight">LA Surf Crew</p>
+<p class="text-gray-200 text-xs">1.8k members</p>
+</div>
+</div>
+<div class="flex-none w-40 snap-start">
+<div class="bg-cover bg-center flex flex-col justify-end p-3 rounded-lg aspect-[3/4]" data-alt="People playing soccer on a green field" style='background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 60%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuDFF_9y2l-nIYaPP53Pv-IZXwHjDTjnyc-hHIN-ucKV3u3BG2rBej8pWS3jm9WqbcUwnuEoghLcCpeqjMss33yJWYrzkUFHrgejecRb_hTpndQPwLqA9hXkx_ELu8lg0a2aXi6rMoKkkyfp0WtEHxCAQilF04-A4qeDmj6bwoGv4yBYxDwHuZSJVuY72He6m91YUXz1U2Npq2TF5jwD-xCugp4McbiqNtqvVgnbsTzXEdARmjCcvzEnhCWmBPfLR_a9veqKUBnNTvE");'>
+<p class="text-white text-base font-bold leading-tight">NYC Soccer Pick-up</p>
+<p class="text-gray-200 text-xs">3.1k members</p>
+</div>
+</div>
+<div class="flex-none w-40 snap-start">
+<div class="bg-cover bg-center flex flex-col justify-end p-3 rounded-lg aspect-[3/4]" data-alt="A mountain biker on a trail in a forest" style='background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 60%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuCod0-XFtWcjHqagXZ5CggZcgQ5L6Nlz4YvUlP9x6wLldyEhq95SpzLbTPNktQru3fUYgVa6wiimlY4fSTC4xaB3CcCUua7_9L7_th5LoD4W-VS9aKscW8AfARUESzK3-zV_odiuozl3mXzz-KCDy7oRZZ8rNMDeewhSw27dcrD78L2RqEsNisuZb2GIjbP89LDpy3iSKww-2SzP0KL6ql3LA20vyj77vZZtDzCiC7v_sig64w5ai5zxemnQZWsfigxFvihZOiNm-8");'>
+<p class="text-white text-base font-bold leading-tight">Bay Area MTB</p>
+<p class="text-gray-200 text-xs">980 members</p>
+</div>
+</div>
+<div class="w-4"></div>
+</div>
+</div>
+<!-- Section Header: My Communities -->
+<h2 class="text-text-primary dark:text-dark-text-primary text-xl font-bold tracking-tight px-4 pb-3 pt-5">My Communities</h2>
+<!-- Vertical List: My Communities -->
+<div class="flex flex-col gap-3 px-4 pb-24">
+<div class="flex items-center gap-4 rounded-lg bg-gray-200/50 dark:bg-dark-surface p-3">
+<img class="h-14 w-14 rounded-lg object-cover" data-alt="A group of people hiking on a mountain trail" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBgLOl5lWxMorbMId5KAlX3XyYLDYMUw_uHqY8CTU3csJ1kv3ocw8p8CGGQoFMBmxozFEO9rdrVXprPuZcMDmM1VB0rYLhQpcTVsC6Kmu-T2qbWmUHyndDPSxvxzHLXt20gW4IXtrcfQpYqy3-hXAyLaCg81GtQhBliz20pHvORByatCtlslPp_dfRE4vLzuDglV26AM1xlPj-VKv2Kl7uLnEciPnElmBSnGjHc9K4MyDUbQ6owiwAPl6vmJgf_PHbtPpfiJ7hjPc4"/>
+<div class="flex-1">
+<p class="font-bold text-text-primary dark:text-dark-text-primary">Weekend Hikers</p>
+<p class="text-sm text-text-secondary dark:text-dark-text-secondary line-clamp-1">Alex posted a new trail suggestion!</p>
+</div>
+<div class="flex flex-col items-end">
+<p class="font-semibold text-text-primary dark:text-dark-text-primary">1.2k</p>
+<p class="text-xs text-text-secondary">members</p>
+</div>
+</div>
+<div class="flex items-center gap-4 rounded-lg bg-gray-200/50 dark:bg-dark-surface p-3">
+<img class="h-14 w-14 rounded-lg object-cover" data-alt="A person running on a track at sunrise" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAs3e1BKoXvPZNhSMXzzBc9qA3MA1JWtqwWN8ZmKVt610t8jtq1kPqDhi-CQYYI0mdCZyClZyrJwlyraZTP0QwN1CQs5ilSRsfcTWMCVv4sac4STZlDU8Dw1yXZQ3EO75zuH-zzrxvi4NgNkMcRjqLHmfTdrnRUd0TLm8s9FKVtqwGo51kWpLFuLXvj1fPtA0IMLMs_va0-RhokrcFnHwgvmZIeiYG1yxGPX2w-BKgleg0HsHs5MpSLIByj_ihI4bshdjvyOP4PCXg"/>
+<div class="flex-1">
+<p class="font-bold text-text-primary dark:text-dark-text-primary">City Runners Club</p>
+<p class="text-sm text-text-secondary dark:text-dark-text-secondary line-clamp-1">Next meetup: Saturday at 8 AM</p>
+</div>
+<div class="flex flex-col items-end">
+<p class="font-semibold text-text-primary dark:text-dark-text-primary">5.6k</p>
+<p class="text-xs text-text-secondary">members</p>
+</div>
+</div>
+<div class="flex items-center gap-4 rounded-lg bg-gray-200/50 dark:bg-dark-surface p-3">
+<img class="h-14 w-14 rounded-lg object-cover" data-alt="Someone rock climbing up a steep cliff face" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBBK36xcJycIu4WfrOgWJaDKxqaDFxHwGUQjMqmRp9277_ZoYV4pHmYtfPYUlivakfuSFsZDKLSYz2noCyzsfyzpcIMEC9_VRBTeHHlWwQLH2IJcY5Kp4jhvCai8NRO0CGK1ep1A0rg-x6imAwfifKSfteWtuf7_dMvJi7WOcaUjJmtt80Yvs_3kiZJJiRi1osr0o-EgkRVeRV5nW-z2KP1_aZMnWhZljUbd9XK8TNWkn2xtIHe1RARab2uS7gCU1bcCNcbx3lb8ag"/>
+<div class="flex-1">
+<p class="font-bold text-text-primary dark:text-dark-text-primary">Rock Climbing Enthusiasts</p>
+<p class="text-sm text-text-secondary dark:text-dark-text-secondary line-clamp-1">New gear review posted.</p>
+</div>
+<div class="flex flex-col items-end">
+<p class="font-semibold text-text-primary dark:text-dark-text-primary">850</p>
+<p class="text-xs text-text-secondary">members</p>
+</div>
+</div>
+</div>
+<!-- Bottom Navigation Bar -->
+<nav class="fixed bottom-0 left-0 right-0 z-10 flex h-20 items-center justify-around border-t border-gray-200/50 bg-background-light/80 dark:border-gray-800/50 dark:bg-background-dark/80 backdrop-blur-sm">
+<a class="flex flex-col items-center gap-1 text-primary" href="homepage.html">
+<span class="material-symbols-outlined fill">home</span>
+<span class="text-xs font-bold">Home</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-gray-500 dark:text-gray-400" href="communities.html">
+<span class="material-symbols-outlined">search</span>
+<span class="text-xs font-medium">Clubs</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-gray-500 dark:text-gray-400" href="weatherhub.html">
+<span class="material-symbols-outlined">cloud</span>
+<span class="text-xs font-medium">Weather</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-gray-500 dark:text-gray-400" href="progresspage.html">
+<span class="material-symbols-outlined">person</span>
+<span class="text-xs font-medium">Progress</span>
+</a>
+</nav>
+</div>
+</body></html>

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Settings Screen</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#0da6f2",
+            "background-light": "#f5f7f8",
+            "background-dark": "#101c22",
+          },
+          fontFamily: {
+            "display": ["Lexend", "sans-serif"]
+          },
+          borderRadius: {
+            "DEFAULT": "1rem",
+            "lg": "2rem",
+            "xl": "3rem",
+            "full": "9999px"
+          },
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display">
+<div class="relative mx-auto flex w-full max-w-lg flex-col">
+<!-- Top App Bar -->
+<div class="flex items-center bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm sticky top-0 z-10 p-4 pb-2 justify-between border-b border-slate-200/10 dark:border-slate-800/50">
+<div class="flex size-10 shrink-0 items-center justify-center text-slate-800 dark:text-white">
+    <a href="profilepage.html">
+        <span class="material-symbols-outlined text-2xl">arrow_back</span>
+
+    </a>
+</div>
+<h2 class="text-slate-900 dark:text-white text-xl font-bold leading-tight tracking-[-0.015em] flex-1 text-center">Settings</h2>
+<div class="w-10"></div>
+</div>
+<!-- Profile Header -->
+<div class="flex p-4 @container border-b border-slate-200/10 dark:border-slate-800/50">
+<div class="flex w-full flex-col gap-4 @[520px]:flex-row @[520px]:justify-between @[520px]:items-center">
+<div class="flex gap-4">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full h-20 w-20 min-h-20" data-alt="User's profile picture, abstract blue and purple gradient" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuClGXJe-fa0JfMGYEzituIz8Z77Z7bU0pP7thSJ9SRSD4t5NuxudIia6oUMJbD16fhjFV9EILkMzAjg7iJYLXeoWCvupM6fMT8N0-jiie6TJaCi7XbW8vLwIEqesGpMqVDphhe9RAK5MB-vESOQI7Wg4wLWIYfuH8GG8ElDvm_bSFFphgCqTKAq_yvooIIH9j6bwPOYxSfffp-2CD0aQp1ul2-A-F1LHTIhrcFqSe6ZPSQUZxTKFKFgmYa6sl1eiR49luwdVLX3pbo");'></div>
+<div class="flex flex-col justify-center">
+<p class="text-slate-900 dark:text-white text-[22px] font-bold leading-tight tracking-[-0.015em]">Alex Taylor</p>
+<p class="text-slate-500 dark:text-slate-400 text-base font-normal leading-normal">@alextaylor</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Main Content -->
+<div class="flex-1 p-4">
+<!-- Account Section -->
+<h3 class="text-slate-900 dark:text-white text-lg font-bold leading-tight tracking-[-0.015em] pb-2 pt-2">Account</h3>
+<div class="flex flex-col gap-2 bg-slate-200/30 dark:bg-slate-500/10 rounded-lg overflow-hidden">
+<div class="flex items-center gap-4 bg-transparent p-4 min-h-14 justify-between">
+<div class="flex items-center gap-4">
+<div class="text-slate-800 dark:text-white flex items-center justify-center rounded-lg bg-primary/20 shrink-0 size-10">
+<span class="material-symbols-outlined">person</span>
+</div>
+<p class="text-slate-900 dark:text-white text-base font-normal leading-normal flex-1 truncate">Account Details</p>
+</div>
+<div class="shrink-0">
+<div class="text-slate-500 dark:text-slate-400 flex size-7 items-center justify-center">
+<span class="material-symbols-outlined">chevron_right</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-4 bg-transparent p-4 min-h-14 justify-between">
+<div class="flex items-center gap-4">
+<div class="text-slate-800 dark:text-white flex items-center justify-center rounded-lg bg-primary/20 shrink-0 size-10">
+<span class="material-symbols-outlined">surfing</span>
+</div>
+<p class="text-slate-900 dark:text-white text-base font-normal leading-normal flex-1 truncate">My Sports</p>
+</div>
+<div class="shrink-0">
+<div class="text-slate-500 dark:text-slate-400 flex size-7 items-center justify-center">
+<span class="material-symbols-outlined">chevron_right</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-4 bg-transparent p-4 min-h-14 justify-between">
+<div class="flex items-center gap-4">
+<div class="text-slate-800 dark:text-white flex items-center justify-center rounded-lg bg-primary/20 shrink-0 size-10">
+<span class="material-symbols-outlined">shield</span>
+</div>
+<p class="text-slate-900 dark:text-white text-base font-normal leading-normal flex-1 truncate">Privacy &amp; Security</p>
+</div>
+<div class="shrink-0">
+<div class="text-slate-500 dark:text-slate-400 flex size-7 items-center justify-center">
+<span class="material-symbols-outlined">chevron_right</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Preferences Section -->
+<h3 class="text-slate-900 dark:text-white text-lg font-bold leading-tight tracking-[-0.015em] pb-2 pt-6">Preferences</h3>
+<div class="flex flex-col gap-2 bg-slate-200/30 dark:bg-slate-500/10 rounded-lg overflow-hidden">
+<div class="flex items-center gap-4 bg-transparent p-4 min-h-14 justify-between">
+<div class="flex items-center gap-4">
+<div class="text-slate-800 dark:text-white flex items-center justify-center rounded-lg bg-primary/20 shrink-0 size-10">
+<span class="material-symbols-outlined">notifications</span>
+</div>
+<p class="text-slate-900 dark:text-white text-base font-normal leading-normal flex-1 truncate">Notifications</p>
+</div>
+<div class="shrink-0">
+<div class="text-slate-500 dark:text-slate-400 flex size-7 items-center justify-center">
+<span class="material-symbols-outlined">chevron_right</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-4 bg-transparent p-4 min-h-14 justify-between">
+<div class="flex items-center gap-4">
+<div class="text-slate-800 dark:text-white flex items-center justify-center rounded-lg bg-primary/20 shrink-0 size-10">
+<span class="material-symbols-outlined">thermostat</span>
+</div>
+<p class="text-slate-900 dark:text-white text-base font-normal leading-normal flex-1 truncate">Weather Preferences</p>
+</div>
+<div class="shrink-0">
+<div class="text-slate-500 dark:text-slate-400 flex size-7 items-center justify-center">
+<span class="material-symbols-outlined">chevron_right</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-4 bg-transparent p-4 min-h-14 justify-between">
+<div class="flex items-center gap-4">
+<div class="text-slate-800 dark:text-white flex items-center justify-center rounded-lg bg-primary/20 shrink-0 size-10">
+<span class="material-symbols-outlined">contrast</span>
+</div>
+<p class="text-slate-900 dark:text-white text-base font-normal leading-normal flex-1 truncate">Appearance</p>
+</div>
+<div class="shrink-0">
+<div class="text-slate-500 dark:text-slate-400 flex size-7 items-center justify-center">
+<span class="material-symbols-outlined">chevron_right</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Support & Legal Section -->
+<h3 class="text-slate-900 dark:text-white text-lg font-bold leading-tight tracking-[-0.015em] pb-2 pt-6">Support &amp; Legal</h3>
+<div class="flex flex-col gap-2 bg-slate-200/30 dark:bg-slate-500/10 rounded-lg overflow-hidden">
+<div class="flex items-center gap-4 bg-transparent p-4 min-h-14 justify-between">
+<div class="flex items-center gap-4">
+<div class="text-slate-800 dark:text-white flex items-center justify-center rounded-lg bg-primary/20 shrink-0 size-10">
+<span class="material-symbols-outlined">help</span>
+</div>
+<p class="text-slate-900 dark:text-white text-base font-normal leading-normal flex-1 truncate">Help &amp; Support</p>
+</div>
+<div class="shrink-0">
+<div class="text-slate-500 dark:text-slate-400 flex size-7 items-center justify-center">
+<span class="material-symbols-outlined">chevron_right</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-4 bg-transparent p-4 min-h-14 justify-between">
+<div class="flex items-center gap-4">
+<div class="text-slate-800 dark:text-white flex items-center justify-center rounded-lg bg-primary/20 shrink-0 size-10">
+<span class="material-symbols-outlined">info</span>
+</div>
+<p class="text-slate-900 dark:text-white text-base font-normal leading-normal flex-1 truncate">About</p>
+</div>
+<div class="shrink-0">
+<div class="text-slate-500 dark:text-slate-400 flex size-7 items-center justify-center">
+<span class="material-symbols-outlined">chevron_right</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Logout Button -->
+<div class="mt-8">
+<button class="flex w-full items-center justify-center gap-2 rounded-lg bg-primary/20 dark:bg-primary/30 h-12 text-center text-primary font-semibold">
+<span class="material-symbols-outlined">logout</span>
+          Logout
+        </button>
+</div>
+</div>
+</div>
+</body></html>

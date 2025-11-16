@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>User Profile</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0da6f2",
+                        "background-light": "#f5f7f8",
+                        "background-dark": "#101c22",
+                    },
+                    fontFamily: {
+                        "display": ["Lexend", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings:
+                'FILL' 0,
+                'wght' 400,
+                'GRAD' 0,
+                'opsz' 24
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="font-display">
+<div class="relative flex h-auto min-h-screen w-full flex-col bg-background-light dark:bg-background-dark group/design-root overflow-x-hidden">
+<!-- Top App Bar -->
+<div class="flex items-center bg-background-light dark:bg-background-dark p-4 pb-2 justify-between">
+<div class="flex size-12 shrink-0 items-center justify-start text-zinc-900 dark:text-white">
+    <a href="progresspage.html">
+        <span class="material-symbols-outlined">arrow_back</span>
+    </a>
+</div>
+<h2 class="text-zinc-900 dark:text-white text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center">alexjaxon</h2>
+<div class="flex w-12 items-center justify-end">
+<button class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-12 bg-transparent text-zinc-900 dark:text-white gap-2 text-base font-bold leading-normal tracking-[0.015em] min-w-0 p-0">
+<a href="settingspage.html">
+    <span class="material-symbols-outlined">more_horiz</span>
+</a>
+</button>
+</div>
+</div>
+<!-- Profile Header -->
+<div class="flex p-4 @container">
+<div class="flex w-full flex-col gap-4 @[520px]:flex-row @[520px]:justify-between @[520px]:items-center">
+<div class="flex gap-4 items-center">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full h-24 w-24 shrink-0" data-alt="Profile picture of Alex Jaxon" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA9QJ3p2Ixd_SP_C2VXELHOSAIQIinK1wBR7fI4_rBSyPaABrro07JM9E3wK2DYlOO5PncI5d4_fvE1HQgmJFeEgoh6Bm4Fom7rKxVNm2IWxhLQF_qkcOsU5-bSJ5_y-fKkIM0yOn4ZlwbWw9DUkaaNxSVMXDbER8t_GkVUviLk0qxz_ziQ7OmSHsiRqHyA9fQsLfS59LATaIGLeXQeZ2IXAkMqAc6Bc4N9fw1T1uYS81Xzja8ZMueq6gcohjIAqMROLzX5C3mukUI");'></div>
+<div class="flex flex-col justify-center">
+<p class="text-zinc-900 dark:text-white text-[22px] font-bold leading-tight tracking-[-0.015em]">Alex Jaxon</p>
+<p class="text-zinc-500 dark:text-zinc-400 text-base font-normal leading-normal">@alexjaxon</p>
+</div>
+</div>
+<a href="editprofilepage.html">
+    <button class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-4 bg-zinc-200 dark:bg-zinc-800 text-zinc-900 dark:text-white text-sm font-bold leading-normal tracking-[0.015em] w-full max-w-[480px] @[480px]:w-auto">
+<span class="truncate">Edit Profile</span>
+</button>
+</a>
+</div>
+</div>
+<!-- Body Text (Bio) -->
+<p class="text-zinc-800 dark:text-zinc-300 text-base font-normal leading-normal pb-3 pt-1 px-4">
+            Passionate about hitting the slopes and catching waves. Follow my adventures in snowboarding and surfing around the world.
+        </p>
+<!-- Profile Stats -->
+<div class="flex flex-wrap gap-3 px-4 py-3">
+<div class="flex min-w-[100px] flex-1 basis-[fit-content] flex-col gap-2 rounded-lg border border-zinc-200 dark:border-zinc-800 p-3 items-start">
+<p class="text-zinc-900 dark:text-white tracking-light text-2xl font-bold leading-tight">128</p>
+<div class="flex items-center gap-2">
+<p class="text-zinc-500 dark:text-zinc-400 text-sm font-normal leading-normal">Posts</p>
+</div>
+</div>
+<div class="flex min-w-[100px] flex-1 basis-[fit-content] flex-col gap-2 rounded-lg border border-zinc-200 dark:border-zinc-800 p-3 items-start">
+<p class="text-zinc-900 dark:text-white tracking-light text-2xl font-bold leading-tight">1.2K</p>
+<div class="flex items-center gap-2">
+<p class="text-zinc-500 dark:text-zinc-400 text-sm font-normal leading-normal">Followers</p>
+</div>
+</div>
+<div class="flex min-w-[100px] flex-1 basis-[fit-content] flex-col gap-2 rounded-lg border border-zinc-200 dark:border-zinc-800 p-3 items-start">
+<p class="text-zinc-900 dark:text-white tracking-light text-2xl font-bold leading-tight">340</p>
+<div class="flex items-center gap-2">
+<p class="text-zinc-500 dark:text-zinc-400 text-sm font-normal leading-normal">Following</p>
+</div>
+</div>
+</div>
+<!-- Tabs -->
+<div class="pb-3">
+<div class="flex border-b border-zinc-200 dark:border-zinc-800 px-4 justify-between">
+<a class="flex flex-col items-center justify-center border-b-[3px] border-b-primary text-primary pb-[13px] pt-4 flex-1" href="#">
+<p class="text-sm font-bold leading-normal tracking-[0.015em]">Posts</p>
+</a>
+<a class="flex flex-col items-center justify-center border-b-[3px] border-b-transparent text-zinc-500 dark:text-zinc-400 pb-[13px] pt-4 flex-1" href="#">
+<p class="text-sm font-bold leading-normal tracking-[0.015em]">Sports</p>
+</a>
+</div>
+</div>
+<!-- Image Grid -->
+<div class="grid grid-cols-3 gap-1 px-1 py-3">
+<div class="aspect-square bg-cover bg-center" data-alt="A snowboarder mid-air against a snowy mountain backdrop." style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCebNJ-P7A4WWJORkLwrygrj6o1STmg7oEj6sb7ytQ68TX4CrGaNAB7vtvaiqb9sBngviL5qusxersJ9VDKvKi9jQ0QbHlLucZoPSnoQ2jESfcwh2wI-7aEKAzXwrSwHOIQ8TXwCzHx9ucka0NpV_bw7uzLVND99DGuZ5-JA53gqqRAqpNtcwIT-v60Jr4DIvLkrP62H087e1KjZjLIfVJpoMHZQwNDwP9vB5oCeD18MVF-5C2ufa5hp5ll3aJ6EnhlPCoCdxlmIV4");'></div>
+<div class="aspect-square bg-cover bg-center" data-alt="A surfer riding a large wave." style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCqC7UOBVmuVj7kA4jTcOBgGsMAKELZ9CdvHFCK8hZQBU1L-XzS72FPJiTkJ2vgxJSRkZf_s8jhiYMG9fvjIxlL5SIiR9FX5Y2cgiSzD3k8kq74RHiMQGaY2vLb9YvPIGzXfQcW4YS4r2O1AdhG7fVhT7d_HM18g-rmM1V82G5l19A4BkYPsFGBa533tNr6ceBvGJkdCnSW3sXhijxoWNbPliVBPMwN38PBSFEtvv5_zxFsKIp8lv3Gym2D7JK3kJF4YfKeAXTCqgk");'></div>
+<div class="aspect-square bg-cover bg-center" data-alt="A snowy landscape with a ski lift in the distance." style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDB274gvRYHbcIP0-0nMegNHElKJp4--6E2HozBUJCLnOvAeLY1SPFAYpRY0IYnfn_rFNQI-f3H-QTkRubDFRYsCVPDe2koxGwnvCNOJTkpSi13TtAc5yfiQWVN91bRbozOrQOmbzd1z2_59aBGaBY7xtwR8bnyc4cIZM9gdx0zIHd58_VSjY1NL4D4YWznQb648vgUrGJQoyTtO0ZsFqXrX0ZOmPiJWcBvc8DctYm_UczGI3ajfdzUS2FUIdsQ8mrdmf2Gw2EsFyc");'></div>
+<div class="aspect-square bg-cover bg-center" data-alt="Close-up of a surfboard's fin in the sand with the ocean in the background." style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuD0CFRwUeGvJwahElN46BcQaCJ_pAGzcR1p-NoiZijJSfGY3NqFck0UWcO0E-AIn-WpteFIdxGuO2HaOdQSL3I6n-N-T6q9Xcu6T9aP5vSrRT3xNGnk82ISH6jx2ZpTk-pwuynCM4dX9IOnPUevfrlWuWoyv_KE0w6L1G98lv1hEB-NZkgDpPPlOQHNwX2_vbOaInZJls33vP57X8iDJ7PJVSJhI4LJvc-DL-O0OMJVnJ-6Ht4eqCR0nohGsyhYkHiYTHJd3XQMr2U");'></div>
+<div class="aspect-square bg-cover bg-center" data-alt="A group of people surfing during sunset." style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBATxxHyvOovfbeuPKwysxphJsbRWJYEDpg4JbLlmoIqLU7Hp_difxepjv0HkRIBzh_KmdVPkSBWBZU-UI8mMUx61hu9S5KEC64eYbcBmQUe_nc7THPnH2irDeWJAGDg3hAg9Shm2dYveu7-uAvdYS-BOvLzVIFBIuOrfpcvAR2sBGrwg6MOKsIq2HM0YKnWDgxHm5O4dKCtCph4UuX1SU38dZqoMKn2tksiuaq61ys7Bv0BRXMT-i7rZb72ELKZaYXeEloWoNUZoA");'></div>
+<div class="aspect-square bg-cover bg-center" data-alt="A snowboarder carving through fresh powder snow." style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCxBzNivchFdGdav0_QGdV_fGekZZ4yBjZZ5Hum1Oh5dsGJvnaMtASld0Eq5oBWrV1w5fYSe_2fdoUO7E3PAMs-vAepnZM8MdqXOLJCvfccotScPKowh-6wL9TegGIJAb7nH_gD5WzhORWsSjOWEYYW1ix6cnOHte1ey_AiZMuoNb2mGy5BzrPJQleg8CbTzjcgYfSTAPaEmygmxQPnWR32SFTgiv1Zm2nCkCvdE2fls22G6ywfsUJy7z0eLppBOEV4qXPnb_covrE");'></div>
+</div>
+</div>
+</body></html>

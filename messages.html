@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Messages</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#0da6f2",
+              "background-light": "#f5f7f8",
+              "background-dark": "#101c22",
+            },
+            fontFamily: {
+              "display": ["Lexend", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24
+      }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display">
+<div class="relative mx-auto flex h-screen w-full max-w-md flex-col bg-background-light dark:bg-background-dark group/design-root overflow-hidden">
+<!-- Top App Bar -->
+<header class="flex flex-col bg-background-light dark:bg-background-dark pt-4 pb-2 sticky top-0 z-10">
+<div class="flex items-center px-4 pb-2 justify-between">
+<div class="text-slate-900 dark:text-white flex size-12 shrink-0 items-center justify-start -ml-3">
+<div class="text-slate-800 dark:text-white flex size-12 shrink-0 items-center justify-center">
+    <a href="homepage.html">
+        <span class="material-symbols-outlined text-2xl">arrow_back</span>
+    </a>
+</div>
+</div>
+<h1 class="text-slate-900 dark:text-white text-xl font-bold leading-tight tracking-[-0.015em] flex-1 text-center">Messages</h1>
+<div class="flex size-12 shrink-0 items-center justify-end"></div>
+</div>
+<!-- Search Bar -->
+<div class="px-4 py-3">
+<label class="flex flex-col min-w-40 h-12 w-full">
+<div class="flex w-full flex-1 items-stretch rounded-full h-full">
+<div class="text-slate-500 dark:text-slate-400 flex border-none bg-slate-200 dark:bg-slate-800/50 items-center justify-center pl-4 rounded-l-full border-r-0">
+<span class="material-symbols-outlined">search</span>
+</div>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-r-full text-slate-900 dark:text-white focus:outline-0 focus:ring-0 border-none bg-slate-200 dark:bg-slate-800/50 h-full placeholder:text-slate-500 dark:placeholder:text-slate-400 px-4 pl-2 text-base font-normal leading-normal" placeholder="Search conversations" value=""/>
+</div>
+</label>
+</div>
+</header>
+<!-- Chat List -->
+<main class="flex-1 overflow-y-auto pb-24">
+<div class="flex flex-col">
+<!-- List Item 1 - Unread Message -->
+<div class="flex items-center gap-4 bg-transparent px-4 min-h-[72px] py-2 justify-between">
+<div class="flex items-center gap-4 flex-1 min-w-0">
+<div class="relative shrink-0">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full h-14 w-14" data-alt="Profile picture of Alex Ray" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCRmFzHh7W7BbGA5D0eZcdBzRYD-f98Zo9fwMAc9B5qoWfWXuqbZckqUUsvpQzwcRax-8JC2AmsQvRBnLHFhPuupb3FjQZiYdMYTWPalmWrzryjte8m_TI6Q2XZ6seRisS0djTSaWorHkw7UnIrRWEyFuWWZ5hh_vjFHI5Hxx0Nz-U6UKuVmm93-42xuQiNFFJhBmN1YcUQ76n7tYbbS_zOOrLsXvRlFKG7yhFeRqQXiym8E47aI_BqhCYOQ566uwieO2hkqVxHu1g");'></div>
+<div class="absolute bottom-0 right-0 size-4 rounded-full bg-green-500 border-2 border-background-light dark:border-background-dark"></div>
+</div>
+<div class="flex flex-col justify-center flex-1 min-w-0">
+<p class="text-slate-900 dark:text-white text-base font-medium leading-normal truncate">Alex Ray</p>
+<p class="text-primary text-sm font-semibold leading-normal truncate">Hey, you up for snowboarding this weekend?</p>
+</div>
+</div>
+<div class="shrink-0 flex flex-col items-end gap-1">
+<p class="text-slate-500 dark:text-slate-400 text-xs font-normal leading-normal">5m ago</p>
+<div class="flex size-6 items-center justify-center rounded-full bg-primary"><p class="text-white text-xs font-bold">1</p></div>
+</div>
+</div>
+<!-- List Item 2 - Active -->
+<div class="flex items-center gap-4 bg-transparent px-4 min-h-[72px] py-2 justify-between">
+<div class="flex items-center gap-4 flex-1 min-w-0">
+<div class="relative shrink-0">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full h-14 w-14" data-alt="Profile picture of Mia Summers" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDztAEON_5bvsi_b-Kio3PSwSpw5r7_Cf3ksDL9eTnfYWMkp4Ln-iclmqRiujbYhsrM_X4AzmN1FlkbLoo99qf_BRX3p1RdyojQjrhHukpsHF4kKqkSqbmYex5LnO1b_Qj3ue_nQBmFeXEIqoAASLJy-zdNrGJe3bRp8-JUIHeJFillj7F3EkkkjA-nRnsiCB7mh4i5YKzN-10tP_7TVOQj-evPgJ--Pi_xZBBxJv8ZGnLYNB83NyCmMGiaFTGmFyVgDxT5WIoNk7U");'></div>
+<div class="absolute bottom-0 right-0 size-4 rounded-full bg-green-500 border-2 border-background-light dark:border-background-dark"></div>
+</div>
+<div class="flex flex-col justify-center flex-1 min-w-0">
+<p class="text-slate-900 dark:text-white text-base font-medium leading-normal truncate">Mia Summers</p>
+<p class="text-slate-500 dark:text-slate-400 text-sm font-normal leading-normal truncate">The surf forecast looks amazing for tomorrow!</p>
+</div>
+</div>
+<div class="shrink-0">
+<p class="text-slate-500 dark:text-slate-400 text-xs font-normal leading-normal">2h ago</p>
+</div>
+</div>
+<!-- List Item 3 -->
+<div class="flex items-center gap-4 bg-transparent px-4 min-h-[72px] py-2 justify-between">
+<div class="flex items-center gap-4 flex-1 min-w-0">
+<div class="relative shrink-0">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full h-14 w-14" data-alt="Profile picture of Jordan Lee" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAtCAUzn04cmGOmyCwll49ldSsFBufxApfLAn1uDezmppmiPIGbVXlcMCBBA7WUiYKfnzRSGxtskBNVOZb0tZiZ84jHGxXPs9iq2cOEoEitg3vmtnmGrRnP04cpvUvHx_PI9PdkovVd3RiEyZdcrCZ7OAr3dYGlfSEIzjCcxclbGlyNcxzuVcWUYXP3u81jPK1xnkoz0Ld3MyeYJTRxYjgm3EFQui3DjAVBoiXfvCjzF2XWboSYsjeUcPJE1KYTj79V8YzGtgllsYU");'></div>
+</div>
+<div class="flex flex-col justify-center flex-1 min-w-0">
+<p class="text-slate-900 dark:text-white text-base font-medium leading-normal truncate">Jordan Lee</p>
+<p class="text-slate-500 dark:text-slate-400 text-sm font-normal leading-normal truncate">Let's get the soccer team together for a match.</p>
+</div>
+</div>
+<div class="shrink-0"><p class="text-slate-500 dark:text-slate-400 text-xs font-normal leading-normal">Yesterday</p></div>
+</div>
+<!-- List Item 4 -->
+<div class="flex items-center gap-4 bg-transparent px-4 min-h-[72px] py-2 justify-between">
+<div class="flex items-center gap-4 flex-1 min-w-0">
+<div class="relative shrink-0">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full h-14 w-14" data-alt="Profile picture of Chloe Davis" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCJmraSp-UCKk_0VdDKdDUuPWu3zdvszyT-wpU0yN0I0X2W-bXkUq-sKn1RjJH6GSOXIiSrAD84G_tRjRwwpWa2q47piM-8lWEllkjUJJzpA4I56hTiMU7wiKEbqOzT8ErYrGR9Vo4pjFBFb-PyhDH3twuK4hQSjnaxRzIo8qZhhZQK8U5A_AEFPDTGN9bawNHKjdvUp3JMtCmJxuz92B_5vekhlXsVvVGthxrvWYoigT8DnlN90df5HG0ONAbvIr5_wXrEub7q4ws");'></div>
+</div>
+<div class="flex flex-col justify-center flex-1 min-w-0">
+<p class="text-slate-900 dark:text-white text-base font-medium leading-normal truncate">Chloe Davis</p>
+<p class="text-slate-500 dark:text-slate-400 text-sm font-normal leading-normal truncate">Are you free for a climbing session on Friday?</p>
+</div>
+</div>
+<div class="shrink-0"><p class="text-slate-500 dark:text-slate-400 text-xs font-normal leading-normal">3d ago</p></div>
+</div>
+<!-- List Item 5 -->
+<div class="flex items-center gap-4 bg-transparent px-4 min-h-[72px] py-2 justify-between">
+<div class="flex items-center gap-4 flex-1 min-w-0">
+<div class="relative shrink-0">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full h-14 w-14" data-alt="Profile picture of Sam Rivera" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDJwKJ5mHYrI4GQpXpAU8gk7qzViiTcFRDZkmJFRJ2Fo0pjd7myNl7kxJjTnycSYCthvxm_hxpsDiLFyen9I4zkkM-RN0QJ1jM1mGVJ7ChVBYu0C-Z9YNo8P7gxc5lLlrDunxCcrT89HOBoVIemsV21vMABw1sV65PEhYp-gYJWjvx5T-Nt_iij6LvOSojiBD1GO9ULl7f6nVYsH0Zgtja2mE9AoTnGisJnHvLI2SvHEQtXNZa2YwEsQv1akt8qm3N6_G5vkVa9U1E");'></div>
+</div>
+<div class="flex flex-col justify-center flex-1 min-w-0">
+<p class="text-slate-900 dark:text-white text-base font-medium leading-normal truncate">Sam Rivera</p>
+<p class="text-slate-500 dark:text-slate-400 text-sm font-normal leading-normal truncate">Check out this trail I found for mountain biking.</p>
+</div>
+</div>
+<div class="shrink-0"><p class="text-slate-500 dark:text-slate-400 text-xs font-normal leading-normal">10/25/23</p></div>
+</div>
+</div>
+</main>
+<!-- Floating Action Button -->
+<div class="absolute bottom-6 right-6">
+<button class="flex h-16 w-16 items-center justify-center rounded-full bg-primary text-white shadow-lg">
+<span class="material-symbols-outlined text-3xl">edit</span>
+</button>
+</div>
+</div>
+</body></html>

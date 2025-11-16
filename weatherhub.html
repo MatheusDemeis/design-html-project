@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Weather Hub</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#0da6f2",
+            "background-light": "#f5f7f8",
+            "background-dark": "#101c22",
+          },
+          fontFamily: {
+            "display": ["Lexend"]
+          },
+          borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+        },
+      },
+    }
+  </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="font-display">
+<div class="relative flex min-h-screen w-full flex-col bg-background-light dark:bg-background-dark overflow-x-hidden">
+<!-- Top App Bar -->
+<div class="flex items-center p-4 pb-2 justify-between bg-background-light dark:bg-background-dark">
+<div class="text-slate-800 dark:text-white flex size-12 shrink-0 items-center justify-center">
+    <a href="homepage.html">
+        <span class="material-symbols-outlined text-2xl">arrow_back</span>
+    </a>
+</div>
+<h1 class="text-slate-900 dark:text-white text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center">Weather Hub</h1>
+<div class="text-slate-800 dark:text-white flex size-12 shrink-0 items-center justify-center">
+<span class="material-symbols-outlined text-2xl">more_vert</span>
+</div>
+</div>
+<!-- Search Bar -->
+<div class="px-4 py-3">
+<label class="flex flex-col min-w-40 h-12 w-full">
+<div class="flex w-full flex-1 items-stretch rounded-lg h-full">
+<div class="text-slate-400 dark:text-[#9cb0ba] flex border-none bg-slate-200 dark:bg-[#283339] items-center justify-center pl-4 rounded-l-lg border-r-0">
+<span class="material-symbols-outlined text-2xl">search</span>
+</div>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-r-lg text-slate-900 dark:text-white focus:outline-0 focus:ring-0 border-none bg-slate-200 dark:bg-[#283339] h-full placeholder:text-slate-400 dark:placeholder:text-[#9cb0ba] px-4 pl-2 text-base font-normal leading-normal" placeholder="Search and select a location" value="Malibu, California"/>
+</div>
+</label>
+</div>
+<!-- Sport Selector Chips -->
+<div class="flex gap-3 px-4 py-3 overflow-x-auto">
+<div class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-full bg-primary px-4">
+<span class="material-symbols-outlined text-white text-base">surfing</span>
+<p class="text-white text-sm font-medium leading-normal">Surfing</p>
+</div>
+<div class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-full bg-slate-200 dark:bg-[#283339] px-4">
+<span class="material-symbols-outlined text-slate-600 dark:text-[#9cb0ba] text-base">snowboarding</span>
+<p class="text-slate-800 dark:text-white text-sm font-medium leading-normal">Snowboarding</p>
+</div>
+<div class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-full bg-slate-200 dark:bg-[#283339] px-4">
+<span class="material-symbols-outlined text-slate-600 dark:text-[#9cb0ba] text-base">directions_run</span>
+<p class="text-slate-800 dark:text-white text-sm font-medium leading-normal">Running</p>
+</div>
+<div class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-full bg-slate-200 dark:bg-[#283339] px-4">
+<span class="material-symbols-outlined text-slate-600 dark:text-[#9cb0ba] text-base">sports_soccer</span>
+<p class="text-slate-800 dark:text-white text-sm font-medium leading-normal">Soccer</p>
+</div>
+</div>
+<!-- Main Current Conditions Card -->
+<div class="p-4 @container">
+<div class="flex flex-col items-stretch justify-start rounded-xl bg-slate-200 dark:bg-[#1a282f] p-6">
+<div class="flex justify-between items-start">
+<div class="flex flex-col gap-2">
+<p class="text-lg font-bold leading-tight tracking-[-0.015em] text-green-500">Epic Conditions</p>
+<p class="text-5xl font-bold text-slate-900 dark:text-white">3-5<span class="text-3xl align-top ml-1">ft</span></p>
+<p class="text-base font-normal leading-normal text-slate-500 dark:text-[#9cb0ba]">Wave Height</p>
+</div>
+<span class="material-symbols-outlined text-7xl text-primary">waves</span>
+</div>
+</div>
+</div>
+<!-- Secondary Metrics List -->
+<div class="px-4 grid grid-cols-2">
+<div class="flex flex-col gap-1 border-t border-solid border-slate-300 dark:border-t-[#3b4c54] py-4 pr-2">
+<p class="text-sm font-normal leading-normal text-slate-500 dark:text-[#9cb0ba]">Swell Period</p>
+<p class="text-sm font-normal leading-normal text-slate-900 dark:text-white">8s</p>
+</div>
+<div class="flex flex-col gap-1 border-t border-solid border-slate-300 dark:border-t-[#3b4c54] py-4 pl-2">
+<p class="text-sm font-normal leading-normal text-slate-500 dark:text-[#9cb0ba]">Water Temp</p>
+<p class="text-sm font-normal leading-normal text-slate-900 dark:text-white">68°F</p>
+</div>
+<div class="flex flex-col gap-1 border-t border-solid border-slate-300 dark:border-t-[#3b4c54] py-4 pr-2">
+<p class="text-sm font-normal leading-normal text-slate-500 dark:text-[#9cb0ba]">Wind</p>
+<p class="text-sm font-normal leading-normal text-slate-900 dark:text-white">5mph NW</p>
+</div>
+<div class="flex flex-col gap-1 border-t border-solid border-slate-300 dark:border-t-[#3b4c54] py-4 pl-2">
+<p class="text-sm font-normal leading-normal text-slate-500 dark:text-[#9cb0ba]">UV Index</p>
+<p class="text-sm font-normal leading-normal text-slate-900 dark:text-white">High</p>
+</div>
+<div class="flex flex-col col-span-2 gap-1 border-t border-solid border-slate-300 dark:border-t-[#3b4c54] py-4">
+<p class="text-sm font-normal leading-normal text-slate-500 dark:text-[#9cb0ba]">Tide</p>
+<p class="text-sm font-normal leading-normal text-slate-900 dark:text-white">Low tide at 3:15 PM</p>
+</div>
+</div>
+<!-- Forecast Section -->
+<div class="px-4 py-2">
+<h3 class="text-lg font-bold text-slate-900 dark:text-white mb-3">Hourly Forecast</h3>
+<div class="flex gap-3 overflow-x-auto pb-4">
+<!-- Forecast Item 1 -->
+<div class="flex flex-col items-center justify-center gap-2 rounded-xl bg-slate-200 dark:bg-[#1a282f] p-4 min-w-[80px]">
+<p class="text-sm font-medium text-slate-500 dark:text-gray-400">1PM</p>
+<span class="material-symbols-outlined text-3xl text-primary">waves</span>
+<p class="text-base font-bold text-slate-900 dark:text-white">4ft</p>
+</div>
+<!-- Forecast Item 2 -->
+<div class="flex flex-col items-center justify-center gap-2 rounded-xl bg-primary/20 p-4 min-w-[80px]">
+<p class="text-sm font-medium text-slate-500 dark:text-gray-300">2PM</p>
+<span class="material-symbols-outlined text-3xl text-slate-800 dark:text-white">waves</span>
+<p class="text-base font-bold text-slate-900 dark:text-white">5ft</p>
+</div>
+<!-- Forecast Item 3 -->
+<div class="flex flex-col items-center justify-center gap-2 rounded-xl bg-slate-200 dark:bg-[#1a282f] p-4 min-w-[80px]">
+<p class="text-sm font-medium text-slate-500 dark:text-gray-400">3PM</p>
+<span class="material-symbols-outlined text-3xl text-primary">waves</span>
+<p class="text-base font-bold text-slate-900 dark:text-white">5ft</p>
+</div>
+<!-- Forecast Item 4 -->
+<div class="flex flex-col items-center justify-center gap-2 rounded-xl bg-slate-200 dark:bg-[#1a282f] p-4 min-w-[80px]">
+<p class="text-sm font-medium text-slate-500 dark:text-gray-400">4PM</p>
+<span class="material-symbols-outlined text-3xl text-primary">waves</span>
+<p class="text-base font-bold text-slate-900 dark:text-white">4ft</p>
+</div>
+<!-- Forecast Item 5 -->
+<div class="flex flex-col items-center justify-center gap-2 rounded-xl bg-slate-200 dark:bg-[#1a282f] p-4 min-w-[80px]">
+<p class="text-sm font-medium text-slate-500 dark:text-gray-400">5PM</p>
+<span class="material-symbols-outlined text-3xl text-primary">waves</span>
+<p class="text-base font-bold text-slate-900 dark:text-white">3ft</p>
+</div>
+</div>
+</div>
+<!-- Bottom Navigation Bar -->
+<nav class="fixed bottom-0 left-0 right-0 z-10 flex h-20 items-center justify-around border-t border-gray-200/50 bg-background-light/80 dark:border-gray-800/50 dark:bg-background-dark/80 backdrop-blur-sm">
+<a class="flex flex-col items-center gap-1 text-primary" href="homepage.html">
+<span class="material-symbols-outlined fill">home</span>
+<span class="text-xs font-bold">Home</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-gray-500 dark:text-gray-400" href="communities.html">
+<span class="material-symbols-outlined">search</span>
+<span class="text-xs font-medium">Clubs</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-gray-500 dark:text-gray-400" href="weatherhub.html">
+<span class="material-symbols-outlined">cloud</span>
+<span class="text-xs font-medium">Weather</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-gray-500 dark:text-gray-400" href="progresspage.html">
+<span class="material-symbols-outlined">person</span>
+<span class="text-xs font-medium">Progress</span>
+</a>
+</nav>
+</div>
+</body></html>
