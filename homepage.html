@@ -49,15 +49,24 @@
 <div class="relative flex min-h-screen w-full flex-col overflow-x-hidden pb-24">
 <!-- Top App Bar -->
 <header class="sticky top-0 z-10 flex items-center justify-between bg-background-light/80 dark:bg-background-dark/80 p-4 backdrop-blur-sm">
-<h1 class="text-xl font-bold leading-tight tracking-[-0.015em] text-gray-900 dark:text-white">FlowMotion</h1>
-<div class="flex items-center gap-2">
-  <a href="notificationspage.html" aria-label="Notifications" class="flex h-10 w-10 items-center justify-center rounded-full bg-transparent text-gray-800 dark:text-white">
-    <span class="material-symbols-outlined">notifications</span>
-  </a>
-  <a href="messages.html" aria-label="Messages" class="flex h-10 w-10 items-center justify-center rounded-full bg-transparent text-gray-800 dark:text-white">
-    <span class="material-symbols-outlined">chat_bubble</span>
-  </a>
-</div>
+  <h1 class="text-xl font-bold leading-tight tracking-[-0.015em] text-gray-900 dark:text-white">FlowMotion</h1>
+
+  <!-- Hamburger menu button replacing notifications + messages -->
+  <div class="relative">
+    <button id="menuButton" aria-expanded="false" aria-controls="menuDropdown" aria-label="Open menu" class="flex h-10 w-10 items-center justify-center rounded-full bg-transparent text-gray-800 dark:text-white hover:bg-primary/10">
+      <span class="material-symbols-outlined">menu</span>
+    </button>
+
+    <!-- Dropdown menu (initially hidden) -->
+    <div id="menuDropdown" role="menu" tabindex="-1" class="hidden absolute right-0 mt-2 w-48 rounded-lg bg-white dark:bg-background-dark/90 text-gray-800 dark:text-gray-200 shadow-lg ring-1 ring-black/5 overflow-hidden">
+      <a role="menuitem" href="messages.html" class="block px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-700">Messages</a>
+      <a role="menuitem" href="notificationspage.html" class="block px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-700">Notifications</a>
+      <div class="border-t border-gray-100 dark:border-gray-800"></div>
+      <a role="menuitem" href="profilepage.html" class="block px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-700">Profile</a>
+      <a role="menuitem" href="settingspage.html" class="block px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-700">Settings</a>
+      <a role="menuitem" href="#" class="block px-4 py-2 text-sm text-red-600 hover:bg-red-50 dark:hover:bg-red-900">Logout</a>
+    </div>
+  </div>
 </header>
 <!-- Story Carousel -->
 <div class="w-full flex-shrink-0 border-b border-gray-200/10 dark:border-gray-800/50">
@@ -178,4 +187,54 @@
 </a>
 </nav>
 </div>
+
+<!-- Dropdown script -->
+<script>
+  (function () {
+    const btn = document.getElementById('menuButton');
+    const menu = document.getElementById('menuDropdown');
+
+    if (!btn || !menu) return;
+
+    function openMenu() {
+      menu.classList.remove('hidden');
+      btn.setAttribute('aria-expanded', 'true');
+      const first = menu.querySelector('[role="menuitem"]');
+      if (first) first.focus();
+    }
+    function closeMenu() {
+      menu.classList.add('hidden');
+      btn.setAttribute('aria-expanded', 'false');
+      btn.focus();
+    }
+    function toggleMenu(e) {
+      e.stopPropagation();
+      if (menu.classList.contains('hidden')) openMenu();
+      else closeMenu();
+    }
+
+    btn.addEventListener('click', toggleMenu);
+
+    document.addEventListener('click', (e) => {
+      if (!menu.classList.contains('hidden') && !menu.contains(e.target) && e.target !== btn) {
+        closeMenu();
+      }
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeMenu();
+      if ((e.key === 'ArrowDown' || e.key === 'ArrowUp') && !menu.classList.contains('hidden')) {
+        e.preventDefault();
+        const items = Array.from(menu.querySelectorAll('[role="menuitem"]'));
+        if (!items.length) return;
+        const idx = items.indexOf(document.activeElement);
+        const next = e.key === 'ArrowDown' ? (idx + 1) % items.length : (idx - 1 + items.length) % items.length;
+        items[next].focus();
+      }
+    });
+
+    menu.addEventListener('click', (e) => e.stopPropagation());
+  })();
+</script>
+
 </body></html>
